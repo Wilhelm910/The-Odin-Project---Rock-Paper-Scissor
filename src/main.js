@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+const element = document.getElementById("start")
+element.addEventListener("click",game)
+
+
 function computerPlay() {
     let arr = ["rock", "paper", "scissor"]
     return arr[Math.floor(Math.random()*arr.length)]
@@ -7,7 +11,7 @@ function computerPlay() {
 
 function userPlay() {
     let str = prompt("Choose your weapon")
-    return str.toLowerCase()
+   return str.toLowerCase()
 }
 
 function round(userInput, computerInput) {
@@ -54,12 +58,13 @@ function game() {
             winCountComputer++
         }
     }
-    console.log(`You got: ${winCountYou} points. | The Computer got: ${winCountComputer} points`)
+    document.getElementById("countPlayer").innerHTML =`You got: ${winCountYou} points.`
+    document.getElementById("countComputer").innerHTML =`The Computer got: ${winCountComputer} points`
     if (winCountYou > winCountComputer) {
-        console.log("You won the game")
+        document.getElementById("winner").innerHTML = "You won the game"
     } else if (winCountYou < winCountComputer) {
-        console.log("The computer won the game")
+        document.getElementById("winner").innerHTML = "The computer won the game"
     }
 }
-game()
+
 }) 
