@@ -1,0 +1,40 @@
+body {
+
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+   
+}
+
+button {
+    height: 50px;
+    width: 50px;
+   
+}
+#playrock {
+    margin-right: 70px;
+}
+#playpaper {
+    margin-right: 70px;
+}
+
+img {
+    height: 80px;
+    width: auto;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+img:hover {
+    transform:scale(1.3);
+    z-index: 2;;
+}
